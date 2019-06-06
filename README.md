@@ -4,17 +4,16 @@
 It does so using schemas generated from the Kubernetes OpenAPI specification, and
 therefore can validate schemas for multiple versions of Kubernetes.
 
-[![Go Report
-Card](https://goreportcard.com/badge/github.com/instrumenta/kubeval)](https://goreportcard.com/report/github.com/instrumenta/kubeval)
-[![GoDoc](https://godoc.org/github.com/instrumenta/kubeval?status.svg)](https://godoc.org/github.com/instrumenta/kubeval)
-
+To run a specific test:
 
 ```
-$ kubeval my-invalid-rc.yaml
-The document my-invalid-rc.yaml contains an invalid ReplicationController
---> spec.replicas: Invalid type. Expected: integer, given: string
-$ echo $?
-1
+docker run -v $PWD/fixtures:/fixtures kubeval kubeval-run blank.yaml
+```
+
+To run all the tests in the directory:
+
+```
+docker run -v $PWD/fixtures:/fixtures kubeval kubeval-run-all
 ```
 
 
