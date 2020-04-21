@@ -7,13 +7,13 @@ therefore can validate schemas for multiple versions of Kubernetes.
 To run a specific test:
 
 ```
-docker run -v $PWD/fixtures:/fixtures kubeval kubeval-run blank.yaml
+docker run -v $PWD/fixtures:/fixtures devopstestlab/kubeval kubeval-run blank.yaml
 ```
 
 To run all the tests in the directory:
 
 ```
-docker run -v $PWD/fixtures:/fixtures kubeval kubeval-run-all
+docker run -v $PWD/fixtures:/fixtures devopstestlab/kubeval kubeval-run-all
 ```
 
 
